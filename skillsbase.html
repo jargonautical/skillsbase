@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <title>Skillbase insight dashboard</title>
+
+<!-- Bootstrap core CSS ================================================== -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template ===================================== -->
+     
+    <link href="css/cover.css" rel="stylesheet">
+
+<!-- Custom styles for this template ===================================== -->
+
+    <style type="text/css">
+        <!-- style1 {color: #FFFFFF} -->
+    </style>
+</head>
+
+<!-- NAVBAR ============================================================== -->
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">ODI Devon</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+              	          <!--<li><img src="assets/logo2.png" width="50px" height="50px"></li> -->
+              	          <li class="active"><a href="#">Insight dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Marketing messaging and featurettes ======================================= -->
+
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+<!-- One row of text below the carousel -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 align="left">Insight dashboard</h1>
+                <p align="left">The data story behind economic growth.</p>
+            </div>
+            
+        </div><!-- /.row -->
+
+<!-- START THE FEATURETTES =================================================== -->
+
+    <hr class="featurette-divider">
+ 
+<!-- ROW 1 ------------------------------------------------------------------>
+    
+    <div class="row">
+    
+<!-- business start up rate-->
+
+    <div class="col-sm-3">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+        ['Quarter',	'£ collected'],
+        ['2009',	129.72],
+        ['2010',	133.55],
+        ['2011',	128.29],
+        ['2012',	133.42],
+        ['2013',	118.35]
+        ]);
+        
+        
+        var options = {
+        vAxis: {minValue:0, textPosition:'none'},
+        legend: {position:'top'},
+        tooltip: {trigger:"focus"},
+        chartArea: {height:'80%', width:'80%'},
+        colors: ['#2a6cba']
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div_biz'));
+        chart.draw(data, options);
+        }
+        
+        </script>
+        <div class="chart-stage">
+            <div class="chart-title">
+            <h3 align='left'>Business start up rates</h3>  
+            </div>
+            <div id="chart_div_biz">
+            </div>
+        </div>
+        <div class="chart-notes">
+        <p align='left'><br>Source: NOMIS<br></p>
+        </div>
+    </div>  
+   
+<!-- Business rates -->    
+    
+    <div class="col-sm-3">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+        ['Quarter',	'£ retained', '£ collected'],
+        ['2009', 50,	129.72],
+        ['2010', 25,	133.55],
+        ['2011', 20,	128.29],
+        ['2012', 25,	133.42],
+        ['2013', 18,	118.35]
+        ]);
+        
+        
+        var options = {
+        vAxis: {minValue:0, textPosition:'none'},
+        legend: {position:'top'},
+        tooltip: {trigger:"focus"},
+        chartArea: {height:'80%', width:'80%'},
+        colors: ['#2a6cba', '#80e6ff'],
+        isStacked: false
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div_businessrates'));
+        chart.draw(data, options);
+        }
+        
+        </script>
+        <div class="chart-stage">
+            <div class="chart-title">
+            <h3 align='left'>Business rates</h3>  
+            </div>
+            <div id="chart_div_businessrates">
+            </div>
+        </div>
+        <div class="chart-notes">
+        <p align='left'><br>Source: Council</p>
+        </div>
+    </div>  
+
+<!-- industry -->
+
+      <div class="col-sm-6">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+         var data = google.visualization.arrayToDataTable([
+        ['SIC2007','Dec14'],
+        ['A',	438],
+        ['B',	68],
+        ['C',	2615],
+        ['D',	125],
+        ['E',	195],
+        ['F',	2121],
+        ['G',	4896],
+        ['H',	1592],
+        ['I',	2221],
+        ['J',	1342],
+        ['K' ,	1120],
+        ['L' ,	570],
+        ['M' ,	2880],
+        ['N' ,	2786],
+        ['O' ,	1525],
+        ['P' ,	2896],
+        ['Q' ,	4226],
+        ['R' ,	962],
+        ['S' ,	862],
+        ['T' ,	82]
+        ]);
+        
+
+        var options = {
+        vAxis: {minValue:0, textPosition:'none'},
+        legend: {position:'top'},
+        tooltip: {trigger:"focus"},
+        chartArea: {height:'80%', width:'80%'},
+        colors: ['#2a6cba']
+
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_industry'));
+        chart.draw(data, options);
+        }
+        </script>
+        
+        <div class="chart-stage">
+            <div class="chart-title">
+            <h3 align='left'>Industry breakdown by category</h3>  
+            </div>
+            <div id="chart_div_industry">
+            </div>
+        </div>
+        <div class="chart-notes">
+        <p align='left'><br>Source: NOMIS</p>
+        </div>
+    </div>   
+
+</div><!-- /row -->
+
+<hr>
+
+<!-- ROW 2 ------------------------------------------------------------------>
+    
+    <div class="row">
+    
+<!-- skillbase swipes -->
+
+      <div class="col-sm-12">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+         var data = google.visualization.arrayToDataTable([
+        ['Responses','A', 'B', 'C'],
+        ['A',	10, 50, 3],
+        ['B',	100, 140, 40],
+        ['C',	5, 55, 100],
+        ['D',	6, 60, 70],
+        ['E',	7, 55, 90],
+        ['F',	55, 100, 200],
+        ['G',	5, 50, 30],
+        ['H',	4, 55, 155],
+        ['I',	5, 300, 400],
+        ['J',	7, 55, 66],
+        ['K' ,	2, 4, 90],
+        ['L' ,	300, 200, 450],
+        ['M' ,	5, 66, 99],
+        ['N' ,	6, 200, 140],
+        ['O' ,	8, 500, 65],
+        ['P' ,	2, 10, 55],
+        ['Q' ,	250, 44, 57]
+        ]);
+        
+
+        var options = {
+        vAxis: {minValue:0, textPosition:'none'},
+        curveType: 'function',
+        legend: {position:'none'},
+        tooltip: {trigger:"none"},
+        chartArea: {height:'80%', width:'80%'},
+        colors: ['#2a6cba', '#ff0066', '#4ddb4d']
+
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div_swipes'));
+        chart.draw(data, options);
+        }
+        
+        </script>
+        <div class="chart-stage">
+            <div class="chart-title">
+            <h3 align='left'>Skillbase activity</h3>  
+            </div>
+            <div id="chart_div_swipes">
+            </div>
+        </div>
+        <div class="chart-notes">
+        <p align='left'><br>Source: Skillbase</p>
+        </div>
+    </div> 
+    
+</div><!-- /row -->
+
+<hr>
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURETTES ----------------------------------------------------------->
+
+<!-- FOOTER ----------------------------------------------------------------------->
+
+    <footer>
+
+        <p class="pull-right"><a href="#">Back to top</a></p>
+
+        <p>Skillbase 2015 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+
+      </footer>
+
+
+
+</div><!-- /.container -->
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="assets/js/docs.min.js"></script>
+
+  </body>
+
+</html>
